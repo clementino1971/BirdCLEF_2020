@@ -51,14 +51,15 @@ def main():
         print("{} from {}".format(cont,nspecies))
         cont+=1
 
-        if(cont == 3):
-           break
+        #if(cont == 3):
+        #   break
 
         #Getting all records from a Specie
         path_sp = os_path_join(path,sp)
         records = [sp for sp in os_listdir(path_sp)]
 
         for rec in records:
+            audio_input = []
 
             path_chunk = os_path_join(path_sp,rec)
 
@@ -82,15 +83,10 @@ def main():
             db_mel_spec_p = librosa.power_to_db(mel_spec_p,ref=np.max)   
 
             #Transforming the melsSpectrums on GreyScale
-            grey_mel = melToGreyImage(db_mel_spec).tolist()
-            grey_mel_h = melToGreyImage(db_mel_spec_h).tolist()
-            grey_mel_p = melToGreyImage(db_mel_spec_p).tolist()
+            audio_input.append(melToGreyImage(db_mel_spec).tolist())
+            audio_input.append(melToGreyImage(db_mel_spec_h).tolist())
+            audio_input.append(melToGreyImage(db_mel_spec_p).tolist())
 
-            audio_input = np.array([grey_mel, grey_mel_h,grey_mel_p])
-
-            audio_input = audio_input.reshape(40,200,3)
-
-            audio_input = audio_input.tolist()
             train.append({ 'input' : audio_input, 'class' : sp})
 
     #Everyone to json

@@ -57,7 +57,7 @@ def main():
         for rec in records:
             cont3 +=1
 
-            #Reading the file of audio, some feel of them are corrupted
+            #Reading the file of audio, some of them are corrupted
             try:
                 record = AudioSegment_from_mp3(os_path_join(path_sp,rec))
             except:
