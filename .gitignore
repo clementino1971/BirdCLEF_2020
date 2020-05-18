@@ -1,0 +1,4 @@
+train.zip
+*.npy
+train_chunks/
+train/
