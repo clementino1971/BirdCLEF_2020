@@ -56,9 +56,6 @@ def main():
     for sp in species:
         print("{} from {} {}".format(cont,nspecies,sp))
         cont+=1
-        
-        #if(cont >= 3):
-        #    break
 
         #Getting all records from a Specie
         path_sp = os_path_join(path,sp)
@@ -93,11 +90,13 @@ def main():
             grey_mel_p = melToGreyImage(db_mel_spec_p)
             
             audio_input = np.array([grey_mel, grey_mel_h,grey_mel_p])
-
             audio_input = audio_input.reshape(40,200,3)        
-            
+
+            #saving Name of file and your label
             filenames.append(cont)
             labels.append(sp)
+
+            #save the numpy array 'audio_input'
             np.savez_compressed("train/{}.npz".format(cont2),audio_input)
             cont2+=1
         print("--- %s seconds ---" % (time.time() - start_time) )
