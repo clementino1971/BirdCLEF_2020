@@ -50,7 +50,7 @@ def main():
     #Getting all species chunks directories
     species = [sp for sp in os_listdir(path)]
     nspecies = len(species)
-
+    
     cont = 1
     cont2 = 1
     for sp in species:
@@ -60,7 +60,7 @@ def main():
         #Getting all records from a Specie
         path_sp = os_path_join(path,sp)
         records = [sp for sp in os_listdir(path_sp)]
-        
+     
         for rec in records:
 
             path_chunk = os_path_join(path_sp,rec)
@@ -71,6 +71,10 @@ def main():
             #Checking if all chunks have 5s
             if(librosa.get_duration(y=data, sr=sr) < 5):
                 print("It was not to enter here!!")
+                continue
+
+            if(b == True and cont2 == 26113):
+                b = False
                 continue
 
             #separating harmonic and percussive
@@ -93,7 +97,7 @@ def main():
             audio_input = audio_input.reshape(40,200,3)        
 
             #saving Name of file and your label
-            filenames.append(cont)
+            filenames.append(cont2)
             labels.append(sp)
 
             #save the numpy array 'audio_input'
