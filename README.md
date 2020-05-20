@@ -37,7 +37,7 @@ For processing reasons we don't use all the chunks of audios. So, we select the 
                   |      ...
                   |___specie_code960/
 
-And finally we process all the exemples of audio on train_chunks. For each chunk is generated a Melespectrograms and their harmonic and percussive components, according to [Dreidger, Mueller and Disch, 2014](http://www.terasoft.com.tw/conf/ismir2014/proceedings/T110_127_Paper.pdf). And they are saved as a compressed numpy array (.npz). As output of __processDataTrain.py__ we have: 
+And finally we process all the exemples of audio on train_chunks. For each chunk is generated a Melespectrograms and their harmonic and percussive components, according to [Dreidger, Mueller and Disch, 2014](http://www.terasoft.com.tw/conf/ismir2014/proceedings/T110_127_Paper.pdf). And they are saved as a compressed numpy array (.npz). Each numpy array has the shape 40x200x3 As output of __processDataTrain.py__ we have: 
 
      train/
           |___1.npz
