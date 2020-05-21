@@ -14,7 +14,7 @@ First of all we have the full train data downloaded from [LifeCLEF 2020 Bird](ht
         |   ...
         |___specie960/
    
-So, we use __extractChunks.py__ to takes all the data recordings and transforms them into several small pieces of 5 seconds. Where recordings longer than 5 seconds are splited and recordings shorter than 5 seconds are increased(loop) until they complete 5 seconds. The we have more than 620.000 chunks across the 960 species arranged as follows:
+So, we use __extractChunks.py__ to takes all the data recordings and transforms them into several small pieces of 5 seconds. Where recordings longer than 5 seconds are splited and recordings shorter than 5 seconds are increased(loop) until they complete 5 seconds. Then, we have more than 620.000 chunks across the 960 species arranged as follows:
 
     data_chunks/
               |___specie_code1/
