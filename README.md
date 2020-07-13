@@ -50,3 +50,8 @@ And finally we process all the exemples of audio on train_chunks. For each chunk
 Where filenames.py and labels.py are used to pair filenames and labels, and it is used to generate the train batches once all the 93410 arrays don't fit on memory.    
 
 ## Models
+MultiscaleCNN_TripletLoss.ipynb - contains the training of CNN.
+
+Classifiers.ipynb - contains the Classifiers.
+
+Teste.ipynb - The notebook used to make the submissions.
