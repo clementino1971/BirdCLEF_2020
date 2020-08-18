@@ -26,7 +26,7 @@ So, we use __extractChunks.py__ to takes all the data recordings and transforms 
               |___specie_code960/
 
 
-For processing reasons we don't use all the chunks of audios. So, we select the data will use on train models.On  __selectChunks.py__ we take randomly 100(or less) examples of chunks for each specie. As output we have:
+For processing cost reasons we don't use all the chunks of audios. So, we select the data will use on train models.On  __selectChunks.py__ we take randomly 100(or less) examples of chunks for each specie. As output we have:
 
     train_chunks/
                   |___specie_code1/
@@ -47,11 +47,11 @@ And finally we process all the exemples of audio on train_chunks. For each chunk
     filenames.npy
     labels.npy
     
-Where filenames.py and labels.py are used to pair filenames and labels, and it is used to generate the train batches once all the 93410 arrays don't fit on memory.    
+Where filenames.py and labels.py are used to pair filenames and labels, and it is used to generate the train batches.    
 
-## Models
-MultiscaleCNN_TripletLoss.ipynb - contains the training of CNN.
+## Train
+MultiscaleCNN_TripletLoss.ipynb - contains implementation of the training process of Multiscale CNN.
 
-Classifiers.ipynb - contains the Classifiers.
+Classifiers.ipynb - contains the implementation of Classifiers used.
 
-Teste.ipynb - The notebook used to make the submissions.
+Teste.ipynb - The notebook used to make the predictions and the submission.
