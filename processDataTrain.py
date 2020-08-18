@@ -1,3 +1,4 @@
+#imports
 import numpy as np 
 import matplotlib.pyplot as plt
 import os,warnings
@@ -104,7 +105,8 @@ def main():
             np.savez_compressed("train/{}.npz".format(cont2),audio_input)
             cont2+=1
         print("--- %s seconds ---" % (time.time() - start_time) )
-
+    
+    #Saving filenames and its labels
     np.save('filenames.npy', filenames)
     np.save('labels.npy',labels)
 

@@ -1,13 +1,16 @@
+#Imports
 from pydub import AudioSegment
 import os,csv
 import shutil
 import math
 
-mapa = {}
-
 #Paths to files with specie codes downloaded from https://www.aicrowd.com/challenges/lifeclef-2020-bird-monophone
 path_codes = '../BirdCLEF2020_Train_Additional_Data/species_names_to_codes.txt'
 path_audios = '../dataBase/audio/'
+
+
+#mapping specienames and codes
+mapa = {}
 
 with open(path_codes) as sp_cod:
     csv_sp = csv.reader(sp_cod, delimiter=',')
