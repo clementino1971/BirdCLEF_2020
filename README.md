@@ -1,7 +1,5 @@
 # BirdCLEF_2020
 
-[Introduction here]
-
 ## Process Data
 
 First of all we have the full train data downloaded from [LifeCLEF 2020 Bird](https://www.aicrowd.com/challenges/lifeclef-2020-bird-monophone). The data provides more than 70,000 recordings across 960 species. The data looks like:
